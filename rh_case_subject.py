@@ -56,7 +56,8 @@ def main():
                         help="Show full case details (JSON)")
     parser.add_argument("--fields", default=None,
                         metavar="FIELD1,FIELD2,...",
-                        help="Comma-separated fields to display (e.g. status,severity,product)")
+                        help="Comma-separated fields to display "
+                             "(e.g. status,severity,product,isClosed,caseType)")
     args = parser.parse_args()
 
     offline_token = args.token or os.environ.get(ENV_VAR)
